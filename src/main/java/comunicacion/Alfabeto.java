@@ -17,13 +17,10 @@ public class Alfabeto extends Pictograma{
     }
 
     public String toString() {
-        String r = letras[0];
-        for (int i = 1; i < this.letras.length; i++) {
-            r += this.letras[i] + ", ";
-        }
+        String r = String.join(", ", letras);
         return r;
     }
-    
+
     public int cantidadLetras() {
         return this.letras.length;
     }
