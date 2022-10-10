@@ -51,6 +51,6 @@ public class Periodico extends Escrito{
     public String toString() {
         // TODO Auto-generated method stub
         return this.getOrigen() + "\n" + this.getTitulo() + "\n" + this.getAutor() + "\n" + this.getPaginas() + "\n" + 
-        this.getFecha() + "\n" + this.getPrimicia() + "\n" ;
+        this.getFecha() + "\n" + this.getPrimicia();
     }
 }
