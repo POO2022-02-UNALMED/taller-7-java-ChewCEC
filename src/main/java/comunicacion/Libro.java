@@ -7,11 +7,12 @@ public class Libro extends Escrito {
     private String edicion;
     private String interpretacion;
     
-    public Libro(String origen, String titulo, String autor, int paginas, String co_autor, String editorial, String edicion) {
+    public Libro(String origen, String titulo, String autor, int paginas, String co_autor, String editorial, String edicion, String interpretacion) {
         super(origen, titulo, autor, paginas);
         this.co_autor = co_autor;
         this.editorial = editorial;
         this.edicion = edicion;
+        this.interpretacion = interpretacion;
     }
 
     public String getCo_autor() {
@@ -58,8 +59,11 @@ public class Libro extends Escrito {
 
     @Override
     public String toString() {
-        return this.resumen() + "\n" + this.interpretacion;
+        return this.getOrigen() + "\n" + this.getTitulo() + "\n" + this.getAutor() + "\n" + this.getPaginas() + "\n" + 
+        this.getCo_autor() + "\n" + this.getEditorial() + "\n" + this.getEdicion();
     }
+
+   
 
 }
     
