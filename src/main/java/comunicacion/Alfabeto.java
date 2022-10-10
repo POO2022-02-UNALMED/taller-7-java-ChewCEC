@@ -11,19 +11,19 @@ public class Alfabeto extends Pictograma{
         this.interpretacion = interpretacion;
     }
     
+    @Override
     public String interpretacion() {
         return this.interpretacion;
     }
 
     public String toString() {
-        String r = this.getOrigen() + "\n";
-        for (int i = 0; i < this.letras.length; i++) {
-            r += this.letras[i] + "\n";
+        String r = letras[0];
+        for (int i = 1; i < this.letras.length; i++) {
+            r += this.letras[i] + ", ";
         }
-        r += this.interpretacion;
         return r;
     }
-
+    
     public int cantidadLetras() {
         return this.letras.length;
     }

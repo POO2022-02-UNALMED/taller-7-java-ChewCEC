@@ -13,14 +13,6 @@ public class Periodico extends Escrito{
         this.interpretacion = interpretacion;
     }
 
-    public String interpretacion() {
-        return this.interpretacion;
-    }
-
-    public int palabrasTotales(int palabrasPagina) {
-        return palabrasPagina * this.getPaginas();
-    }
-
     public String getFecha() {
         return fecha;
     }
@@ -43,6 +35,16 @@ public class Periodico extends Escrito{
 
     public void setInterpretacion(String interpretacion) {
         this.interpretacion = interpretacion;
+    }
+
+    @Override
+    public String interpretacion() {
+        return this.interpretacion;
+    }
+
+    @Override
+    public int palabrasTotales(int palabrasPagina) {
+        return palabrasPagina * this.getPaginas() * 10;
     }
 
     @Override

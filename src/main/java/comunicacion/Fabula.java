@@ -11,14 +11,6 @@ public class Fabula extends Escrito{
         this.interpretacion = interpretacion;
     }
 
-    public String interpretacion() {
-        return this.interpretacion;
-    }
-
-    public int palabrasTotales(int palabrasPagina) {
-        return palabrasPagina * this.getPaginas();
-    }
-
     public String getEnsenanza() {
         return ensenanza;
     }
@@ -36,8 +28,19 @@ public class Fabula extends Escrito{
     }
 
     @Override
+    public String interpretacion() {
+        return this.interpretacion;
+    }
+
+    @Override
+    public int palabrasTotales(int palabrasPagina) {
+        return palabrasPagina * this.getPaginas()*1;
+    }
+
+    @Override
     public String toString() {
-        return this.getOrigen() + "\n" + this.getTitulo() + "\n" + this.getAutor() + "\n" + this.getPaginas() + "\n" + this.getEnsenanza() + "\n" + this.getInterpretacion();
+        return this.getOrigen() + "\n" + this.getTitulo() + "\n" + this.getAutor() + "\n" 
+        + this.getPaginas() + "\n" + this.getEnsenanza() + "\n" + this.getInterpretacion();
     }
 
 

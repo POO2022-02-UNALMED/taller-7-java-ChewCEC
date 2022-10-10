@@ -17,13 +17,7 @@ public class Tesis extends Escrito{
         this.interpretacion = interpretacion;
     }
 
-    public String interpretacion() {
-        return this.interpretacion;
-    }
-
-    public int palabrasTotales(int palabrasPagina) {
-        return palabrasPagina * this.getPaginas();
-    }
+    
 
     public String getIdea() {
         return idea;
@@ -71,6 +65,16 @@ public class Tesis extends Escrito{
         this.getPaginas() + "\n" + this.getIdea() + "\n" + this.getArgumentos() + "\n" + 
         this.getConclusion() + "\n" + this.getReferencias() + "\n" + this.getInterpretacion();
     
+    }
+
+    @Override
+    public String interpretacion() {
+        return this.interpretacion;
+    }
+
+    @Override
+    public int palabrasTotales(int palabrasPagina) {
+        return palabrasPagina * this.getPaginas()*5;
     }
 
 }
